@@ -34,6 +34,6 @@ public final class ProductListViewModel: ObservableObject {
     func didAppear() async throws {
         let endpoint = Endpoint<ProductListResponse>()
         self.products = try await apiClient.call(endpoint).hits.map(ProductViewModel.init)
-        print(self.products.map { $0.product.title })
+        print(self.products.map { $0.product.price })
     }
 }

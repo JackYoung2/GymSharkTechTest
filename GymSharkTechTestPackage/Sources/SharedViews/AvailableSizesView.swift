@@ -28,6 +28,7 @@ public struct AvailableSizesView: View {
                         .minimumScaleFactor(0.01)
                         .lineLimit(1)
                         .font(.caption)
+                        .foregroundStyle(ColorSystem.text)
                 }
             }
             .padding(space3)

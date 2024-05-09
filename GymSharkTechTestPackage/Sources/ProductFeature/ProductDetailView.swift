@@ -13,38 +13,39 @@ public struct ProductDetailView: View {
     let viewModel: ProductViewModel
     
     public init(viewModel: ProductViewModel) {
-        self.viewModel = .preview
+        self.viewModel = viewModel
     }
     
     public var body: some View {
-        VStack {
-            HStack {
-                Text("\(viewModel.product.title)")
-                    .font(.headline)
-                Spacer()
-            }
-            
-            ScrollableMediaListView(urls: viewModel.mediaURLs)
-                .overlay(alignment: .bottomLeading) {
-                if viewModel.hasLabels {
-                    LabelsView(labels: viewModel.labels)
+        ScrollView {
+            VStack {
+                HStack {
+                    Text("\(viewModel.product.title)")
+                        .font(.headline)
+                    Spacer()
                 }
                 
+                RemoteImageView(url: viewModel.featuredImageUrl)
+                    .overlay(alignment: .bottomLeading) {
+                        if viewModel.hasLabels {
+                            LabelsView(labels: viewModel.labels)
+                        }
+                    }
+                
+                HStack {
+                    Text("\(viewModel.product.title)")
+                    Spacer()
+                    Text("\(viewModel.formattedPrice)")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .foregroundStyle(ColorSystem.text)
+                }
+                
+                detailLabel(text: viewModel.product.colour)
+                    .foregroundStyle(ColorSystem.secondaryText)
             }
-            
-            HStack {
-                Text("\(viewModel.product.title)")
-                Spacer()
-                Text("\(viewModel.formattedPrice)")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .foregroundStyle(ColorSystem.text)
-            }
-
-            detailLabel(text: viewModel.product.colour)
-                .foregroundStyle(ColorSystem.secondaryText)
         }
-        .padding()
+//        .padding()
     }
     
     func detailLabel(text: String) -> some View {

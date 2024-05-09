@@ -11,27 +11,32 @@ import Common
 public struct RemoteImageView: View {
     
     var url: URL?
+    var width: CGFloat?
+    var height: CGFloat?
     
-    public init(url: URL? = nil) {
+    public init(url: URL? = nil, width: CGFloat? = nil, height: CGFloat? = nil) {
         self.url = url
+        self.width = width
+        self.height = height
     }
-
+    
     public var body: some View {
         AsyncImage(url: url) { phase in
             switch phase {
             case .empty:
                 ProgressView()
+                    .frame(width: width, height: height)
             case .success(let image):
                 image.resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 220, height: 260)
+                    .frame(width: width, height: height)
             case .failure:
                 Image("gymshark-logo", bundle: .main)
                     .resizable()
                     .renderingMode(.template)
                     .aspectRatio(contentMode: .fit)
                     .foregroundStyle(ColorSystem.primary)
-                    .frame(width: 220, height: 260)
+                    .frame(width: width, height: height)
             @unknown default:
                 EmptyView()
             }

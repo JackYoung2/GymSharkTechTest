@@ -36,8 +36,10 @@ public struct ProductGridView: View {
                         ProductDetailView(viewModel: prod)
                     }
                 }
+                .navigationTitle("All Products")
             }
         }
+        .accentColor(ColorSystem.tint)
         .onAppear {
             Task {
                 try await viewModel.didAppear()

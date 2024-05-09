@@ -11,7 +11,6 @@ import ProductListFeature
 public struct AppView: View {
     public var body: some View {
         ProductGridView(viewModel: .init(products: []))
-            .background(Color.white)
     }
 }
 

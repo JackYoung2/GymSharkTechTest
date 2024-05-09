@@ -23,7 +23,7 @@ public struct ProductListCellView: View {
         HStack {
 //            VStack {
                 
-                RemoteImageView(url: viewModel.featuredImageUrl)
+            RemoteImageView(url: viewModel.featuredImageUrl, width: 220, height: 260)
                     .overlay(alignment: .bottomLeading) {
                         if viewModel.hasLabels {
                             LabelsView(labels: viewModel.labels)

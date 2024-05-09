@@ -14,18 +14,9 @@ let package = Package(
         .library(name: "ProductFeature", targets: ["ProductFeature"]),
         .library(name: "Common", targets: ["Common"]),
         .library(name: "Models", targets: ["Models"]),
-//        .library(name: "RoundUpClient", targets: ["RoundUpClient"]),
-//        .library(name: "SavingsGoalListFeature", targets: ["SavingsGoalListFeature"]),
-//        .library(name: "CreateSavingsGoalFeature", targets: ["CreateSavingsGoalFeature"]),
-//        .library(name: "AccountsFeature", targets: ["AccountsFeature"]),
-//        .library(name: "LoginFeature", targets: ["LoginFeature"]),
-//        .library(name: "SessionManager", targets: ["SessionManager"])
     ],
     dependencies: [
         .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.0.0"),
-//        .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "6.0.0")),
-//        .package(url: "https://github.com/RxSwiftCommunity/RxDataSources.git", from: "5.0.0"),
-//        .package(url: "https://github.com/kishikawakatsumi/KeychainAccess.git", from: "4.2.2")
     ],
     targets: [
         .target(

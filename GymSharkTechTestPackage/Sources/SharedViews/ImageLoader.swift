@@ -30,6 +30,7 @@ public struct RemoteImageView: View {
                 image.resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: width, height: height)
+                    .clipShape(RoundedRectangle(cornerRadius: space3))
             case .failure:
                 Image("gymshark-logo", bundle: .main)
                     .resizable()

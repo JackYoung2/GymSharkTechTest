@@ -17,13 +17,13 @@ public struct ProductDetailView: View {
     }
     
     public var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
-                HStack {
-                    Text("\(viewModel.product.title)")
-                        .font(.headline)
-                    Spacer()
-                }
+//                HStack {
+//                    Text("\(viewModel.product.title)")
+//                        .font(.ti)
+//                    Spacer()
+//                }
                 
                 RemoteImageView(url: viewModel.featuredImageUrl)
                     .overlay(alignment: .bottomLeading) {
@@ -34,6 +34,7 @@ public struct ProductDetailView: View {
                 
                 HStack {
                     Text("\(viewModel.product.title)")
+                        .fontWeight(.semibold)
                     Spacer()
                     Text("\(viewModel.formattedPrice)")
                         .font(.title2)
@@ -43,9 +44,23 @@ public struct ProductDetailView: View {
                 
                 detailLabel(text: viewModel.product.colour)
                     .foregroundStyle(ColorSystem.secondaryText)
+                
+                
+                Divider()
+                
+                if let text = viewModel.bodyText {
+                    Text("\(text)")
+                        .padding(.top)
+                }
+                
+                HStack {
+                    Spacer()
+                    AvailableSizesView(sizes: viewModel.sizeInStock)
+                }
             }
+            .navigationBarTitle(viewModel.product.title, displayMode: .inline)
+
         }
-//        .padding()
     }
     
     func detailLabel(text: String) -> some View {
@@ -58,4 +73,5 @@ public struct ProductDetailView: View {
 
 #Preview {
     ProductDetailView(viewModel: .preview)
+        .padding()
 }

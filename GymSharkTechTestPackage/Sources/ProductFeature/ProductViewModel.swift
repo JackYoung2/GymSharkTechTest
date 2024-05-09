@@ -22,6 +22,18 @@ public final class ProductViewModel: Identifiable {
     public var productHasFit: Bool { !fit.isEmpty }
     public var mediaURLs: [URL] { product.media.compactMap { URL(string: $0.src) } }
     
+    public var bodyText: AttributedString? {
+        if let nsAttributedString = try? NSAttributedString(
+            data: Data(product.description.utf8),
+            options: [.documentType: NSAttributedString.DocumentType.html],
+            documentAttributes: nil
+        ), var attributedString = try? AttributedString(nsAttributedString, including: \.swiftUI) {
+            attributedString.font = .callout
+            return attributedString
+        }
+        return nil
+    }
+    
     public init(product: Product) {
         self.product = product
     }

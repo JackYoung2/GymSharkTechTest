@@ -9,7 +9,11 @@ import Foundation
 import Models
 import Common
 
-public final class ProductViewModel: Identifiable {
+public final class ProductViewModel: Identifiable, Equatable {
+    public static func == (lhs: ProductViewModel, rhs: ProductViewModel) -> Bool {
+        lhs.product == rhs.product
+    }
+    
     
     public var id: Product.ID { product.id }
     public var product: Product

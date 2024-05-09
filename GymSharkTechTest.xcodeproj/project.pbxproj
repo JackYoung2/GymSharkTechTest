@@ -8,38 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		F2959C7D2BEB95E500F2311B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2959C7C2BEB95E500F2311B /* Assets.xcassets */; };
-		F2959C822BEB95E500F2311B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2959C812BEB95E500F2311B /* Persistence.swift */; };
-		F2959C852BEB95E500F2311B /* GymSharkTechTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2959C832BEB95E500F2311B /* GymSharkTechTest.xcdatamodeld */; };
-		F2959C8F2BEB95E500F2311B /* GymSharkTechTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2959C8E2BEB95E500F2311B /* GymSharkTechTestTests.swift */; };
 		F2959CAA2BEBA09100F2311B /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = F2959CA92BEBA09100F2311B /* AppFeature */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		F2959C8B2BEB95E500F2311B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2959C6D2BEB95E400F2311B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F2959C742BEB95E400F2311B;
-			remoteInfo = GymSharkTechTest;
-		};
-		F2959C952BEB95E500F2311B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2959C6D2BEB95E400F2311B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F2959C742BEB95E400F2311B;
-			remoteInfo = GymSharkTechTest;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		F27823FB2BEBA3D000336782 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F27823FC2BECF7C800336782 /* GymSharkTechTest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = GymSharkTechTest.xctestplan; path = GymSharkTechTestPackage/Tests/GymSharkTechTest.xctestplan; sourceTree = "<group>"; };
 		F2959C752BEB95E400F2311B /* GymSharkTechTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymSharkTechTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2959C7C2BEB95E500F2311B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F2959C812BEB95E500F2311B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		F2959C842BEB95E500F2311B /* GymSharkTechTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GymSharkTechTest.xcdatamodel; sourceTree = "<group>"; };
-		F2959C8A2BEB95E500F2311B /* GymSharkTechTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymSharkTechTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2959C8E2BEB95E500F2311B /* GymSharkTechTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymSharkTechTestTests.swift; sourceTree = "<group>"; };
-		F2959C942BEB95E500F2311B /* GymSharkTechTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymSharkTechTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2959CA72BEB962A00F2311B /* GymSharkTechTestPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GymSharkTechTestPackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,20 +25,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2959CAA2BEBA09100F2311B /* AppFeature in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F2959C872BEB95E500F2311B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F2959C912BEB95E500F2311B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,9 +42,9 @@
 		F2959C6C2BEB95E400F2311B = {
 			isa = PBXGroup;
 			children = (
+				F27823FC2BECF7C800336782 /* GymSharkTechTest.xctestplan */,
 				F2959CA72BEB962A00F2311B /* GymSharkTechTestPackage */,
 				F2959C772BEB95E400F2311B /* GymSharkTechTest */,
-				F2959C8D2BEB95E500F2311B /* GymSharkTechTestTests */,
 				F2959C762BEB95E400F2311B /* Products */,
 				F2959CA82BEBA09100F2311B /* Frameworks */,
 			);
@@ -92,8 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				F2959C752BEB95E400F2311B /* GymSharkTechTest.app */,
-				F2959C8A2BEB95E500F2311B /* GymSharkTechTestTests.xctest */,
-				F2959C942BEB95E500F2311B /* GymSharkTechTestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,18 +63,8 @@
 			children = (
 				F27823FA2BEBA3D000336782 /* Preview Content */,
 				F2959C7C2BEB95E500F2311B /* Assets.xcassets */,
-				F2959C812BEB95E500F2311B /* Persistence.swift */,
-				F2959C832BEB95E500F2311B /* GymSharkTechTest.xcdatamodeld */,
 			);
 			path = GymSharkTechTest;
-			sourceTree = "<group>";
-		};
-		F2959C8D2BEB95E500F2311B /* GymSharkTechTestTests */ = {
-			isa = PBXGroup;
-			children = (
-				F2959C8E2BEB95E500F2311B /* GymSharkTechTestTests.swift */,
-			);
-			path = GymSharkTechTestTests;
 			sourceTree = "<group>";
 		};
 		F2959CA82BEBA09100F2311B /* Frameworks */ = {
@@ -147,42 +97,6 @@
 			productReference = F2959C752BEB95E400F2311B /* GymSharkTechTest.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F2959C892BEB95E500F2311B /* GymSharkTechTestTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F2959CA12BEB95E500F2311B /* Build configuration list for PBXNativeTarget "GymSharkTechTestTests" */;
-			buildPhases = (
-				F2959C862BEB95E500F2311B /* Sources */,
-				F2959C872BEB95E500F2311B /* Frameworks */,
-				F2959C882BEB95E500F2311B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F2959C8C2BEB95E500F2311B /* PBXTargetDependency */,
-			);
-			name = GymSharkTechTestTests;
-			productName = GymSharkTechTestTests;
-			productReference = F2959C8A2BEB95E500F2311B /* GymSharkTechTestTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		F2959C932BEB95E500F2311B /* GymSharkTechTestUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F2959CA42BEB95E500F2311B /* Build configuration list for PBXNativeTarget "GymSharkTechTestUITests" */;
-			buildPhases = (
-				F2959C902BEB95E500F2311B /* Sources */,
-				F2959C912BEB95E500F2311B /* Frameworks */,
-				F2959C922BEB95E500F2311B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F2959C962BEB95E500F2311B /* PBXTargetDependency */,
-			);
-			name = GymSharkTechTestUITests;
-			productName = GymSharkTechTestUITests;
-			productReference = F2959C942BEB95E500F2311B /* GymSharkTechTestUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -195,14 +109,6 @@
 				TargetAttributes = {
 					F2959C742BEB95E400F2311B = {
 						CreatedOnToolsVersion = 15.1;
-					};
-					F2959C892BEB95E500F2311B = {
-						CreatedOnToolsVersion = 15.1;
-						TestTargetID = F2959C742BEB95E400F2311B;
-					};
-					F2959C932BEB95E500F2311B = {
-						CreatedOnToolsVersion = 15.1;
-						TestTargetID = F2959C742BEB95E400F2311B;
 					};
 				};
 			};
@@ -220,8 +126,6 @@
 			projectRoot = "";
 			targets = (
 				F2959C742BEB95E400F2311B /* GymSharkTechTest */,
-				F2959C892BEB95E500F2311B /* GymSharkTechTestTests */,
-				F2959C932BEB95E500F2311B /* GymSharkTechTestUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,20 +139,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F2959C882BEB95E500F2311B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F2959C922BEB95E500F2311B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -256,40 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2959C822BEB95E500F2311B /* Persistence.swift in Sources */,
-				F2959C852BEB95E500F2311B /* GymSharkTechTest.xcdatamodeld in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F2959C862BEB95E500F2311B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F2959C8F2BEB95E500F2311B /* GymSharkTechTestTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F2959C902BEB95E500F2311B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F2959C8C2BEB95E500F2311B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F2959C742BEB95E400F2311B /* GymSharkTechTest */;
-			targetProxy = F2959C8B2BEB95E500F2311B /* PBXContainerItemProxy */;
-		};
-		F2959C962BEB95E500F2311B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F2959C742BEB95E400F2311B /* GymSharkTechTest */;
-			targetProxy = F2959C952BEB95E500F2311B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F2959C9C2BEB95E500F2311B /* Debug */ = {
@@ -471,82 +331,6 @@
 			};
 			name = Release;
 		};
-		F2959CA22BEB95E500F2311B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7T3V73LMKG;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JackYoung.GymSharkTechTestTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GymSharkTechTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GymSharkTechTest";
-			};
-			name = Debug;
-		};
-		F2959CA32BEB95E500F2311B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7T3V73LMKG;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JackYoung.GymSharkTechTestTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GymSharkTechTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GymSharkTechTest";
-			};
-			name = Release;
-		};
-		F2959CA52BEB95E500F2311B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7T3V73LMKG;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JackYoung.GymSharkTechTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GymSharkTechTest;
-			};
-			name = Debug;
-		};
-		F2959CA62BEB95E500F2311B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7T3V73LMKG;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JackYoung.GymSharkTechTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GymSharkTechTest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -568,24 +352,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F2959CA12BEB95E500F2311B /* Build configuration list for PBXNativeTarget "GymSharkTechTestTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F2959CA22BEB95E500F2311B /* Debug */,
-				F2959CA32BEB95E500F2311B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F2959CA42BEB95E500F2311B /* Build configuration list for PBXNativeTarget "GymSharkTechTestUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F2959CA52BEB95E500F2311B /* Debug */,
-				F2959CA62BEB95E500F2311B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -594,19 +360,6 @@
 			productName = AppFeature;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		F2959C832BEB95E500F2311B /* GymSharkTechTest.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				F2959C842BEB95E500F2311B /* GymSharkTechTest.xcdatamodel */,
-			);
-			currentVersion = F2959C842BEB95E500F2311B /* GymSharkTechTest.xcdatamodel */;
-			path = GymSharkTechTest.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = F2959C6D2BEB95E400F2311B /* Project object */;
 }

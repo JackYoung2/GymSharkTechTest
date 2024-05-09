@@ -72,20 +72,12 @@ let package = Package(
             name: "Common",
             dependencies: ["Models"],
             resources: [.process("Resources")]
-        )
-//        .target(
-//            name: "KeychainClient",
-//            dependencies: [.product(name: "KeychainAccess", package: "KeychainAccess")]
-//        ),
-//        .target(
-//            name: "SessionManager",
-//            dependencies: ["KeychainClient"]
-//        ),
-//        .testTarget(
-//            name: "RoundUpPackageTests",
-//            dependencies: [
-//                "AppFeature"
-//            ])
+        ),
+        .testTarget(
+            name: "GymSharkTechTestPackageTests",
+            dependencies: [
+                "AppFeature"
+            ])
     ]
       
 )

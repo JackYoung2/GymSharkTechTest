@@ -19,7 +19,7 @@ extension APIClientKey: DependencyKey {
 extension APIClient {
     static var unimplemented: APIClient {
         .init(loadData: { _ in
-                (Data(), URLResponse())
+                Data()
         })
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 //TODO: - Unknown case needed?
 
-public enum Size: String, Codable, CaseIterable {
+public enum Size: String, Codable, CaseIterable, Equatable {
     case xs
     case s
     case l

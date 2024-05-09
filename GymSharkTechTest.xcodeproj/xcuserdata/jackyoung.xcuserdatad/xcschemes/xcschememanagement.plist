@@ -7,7 +7,25 @@
 		<key>GymSharkTechTest.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>F2959C742BEB95E400F2311B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F2959C892BEB95E500F2311B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F2959C932BEB95E500F2311B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

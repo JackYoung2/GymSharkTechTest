@@ -26,14 +26,27 @@ public struct APIClient {
         return decoder
     }
     
-    public var loadData: (URLRequest) async throws -> (Data, URLResponse)
+    public var loadData: (URLRequest) async throws -> (Data)
     
-    var dataTask: (URLRequest) async throws -> (Data, URLResponse) = { request in
-        try await URLSession.shared.data(for: request)
+    var dataTask: (URLRequest) async throws -> (Data) = { request in
+        let (data, response) = try await URLSession.shared.data(for: request)
+        
+        guard let httpResponse = response as? HTTPURLResponse else { throw APIError.networkError }
+        
+        switch httpResponse.statusCode {
+        case 200...209:
+            return data
+        case 401, 403:
+            throw APIError.networkError
+        case 400...409:
+            throw APIError.badRequest
+        default:
+            throw APIError.genericError(httpResponse.statusCode)
+        }
     }
 
     public init(
-        loadData: ((URLRequest) async throws -> (Data, URLResponse))? = nil
+        loadData: ((URLRequest) async throws -> (Data))? = nil
     ) {
         self.loadData = loadData ?? dataTask
     }
@@ -43,31 +56,11 @@ public struct APIClient {
     public func call<Value: Decodable>(
         _ endpoint: Endpoint<Value>
     ) async throws -> Value {
-        guard let (data, response) = try? await loadData(endpoint.urlRequest()) else {
+        guard let data = try? await loadData(endpoint.urlRequest()) else {
             throw APIError.networkError
         }
         
-        if let httpResponse = response as? HTTPURLResponse {
-            switch httpResponse.statusCode {
-            case 200...209:
-                do {
-                    let result = try decoder.decode(Value.self, from: data)
-                    return result
-                } catch {
-                    print(error)
-                    throw APIError.parsingError
-                }
-                
-            case 401, 403:
-                throw APIError.networkError
-                
-            case 400...409:
-                throw APIError.badRequest
-            default:
-                throw APIError.genericError(httpResponse.statusCode)
-            }
-        }
-        
-        throw APIError.networkError
+        let result = try decoder.decode(Value.self, from: data)
+        return result
     }
 }

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-//TODO: - Unknown case needed?
 
 public enum Size: String, Codable, CaseIterable, Equatable {
     case xs
@@ -15,5 +14,4 @@ public enum Size: String, Codable, CaseIterable, Equatable {
     case m
     case xl
     case xxl
-    
 }

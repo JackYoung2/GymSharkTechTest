@@ -14,7 +14,6 @@ public final class ProductViewModel: Identifiable, Equatable {
         lhs.product == rhs.product
     }
     
-    
     public var id: Product.ID { product.id }
     public var product: Product
     public var formattedPrice: String { NumberFormatter.formattedCurrencyFrom(amount: product.price) ?? "" }

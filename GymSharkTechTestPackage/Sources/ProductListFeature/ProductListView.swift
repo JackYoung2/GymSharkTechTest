@@ -9,7 +9,7 @@ import SwiftUI
 import Common
 import ProductFeature
 
-public struct ProductGridView: View {
+public struct ProductListView: View {
     @ObservedObject var viewModel: ProductListViewModel
     
     public init(viewModel: ProductListViewModel) {
@@ -28,7 +28,6 @@ public struct ProductGridView: View {
                         }
                     }
                 }
-//                .padding(.horizontal, space1)
                 .navigationDestination(
                     isPresented: $viewModel.detailShown
                 ) {
@@ -49,5 +48,5 @@ public struct ProductGridView: View {
 }
 
 #Preview {
-    ProductGridView(viewModel: .init(products: .preview))
+    ProductListView(viewModel: .init(products: .preview))
 }

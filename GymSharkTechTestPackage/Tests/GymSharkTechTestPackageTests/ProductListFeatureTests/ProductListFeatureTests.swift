@@ -8,8 +8,8 @@
 import XCTest
 @testable import ProductListFeature
 @testable import Models
-import ProductFeature
-import Dependencies
+@testable import ProductFeature
+@testable import Dependencies
 
 @MainActor
 final class ProductListFeatureTests: XCTestCase {

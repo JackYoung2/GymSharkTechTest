@@ -34,7 +34,6 @@ public struct LabelsView: View {
             }
         }
         .padding(space3)
-//        .roundedBorder()
     }
 }
 

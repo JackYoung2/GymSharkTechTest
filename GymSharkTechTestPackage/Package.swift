@@ -78,6 +78,5 @@ let package = Package(
             dependencies: [
                 "AppFeature"
             ])
-    ]
-      
+    ]      
 )

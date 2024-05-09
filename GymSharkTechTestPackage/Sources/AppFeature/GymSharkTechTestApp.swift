@@ -12,7 +12,7 @@ import ProductListFeature
 struct GymSharkTechTestApp: App {
     var body: some Scene {
         WindowGroup {
-            ProductGridView(viewModel: .init(products: [.preview]))
+            ProductListView(viewModel: .init(products: [.preview]))
                 .padding()
         }
     }

@@ -51,8 +51,6 @@ public struct APIClient {
         self.loadData = loadData ?? dataTask
     }
     
-    
-//    TODO: - Remove returns and throw instead
     public func call<Value: Decodable>(
         _ endpoint: Endpoint<Value>
     ) async throws -> Value {

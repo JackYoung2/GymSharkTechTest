@@ -1,6 +1,6 @@
 //
 //  SwiftUIView.swift
-//  
+//
 //
 //  Created by Jack Young on 08/05/2024.
 //
@@ -19,12 +19,6 @@ public struct ProductDetailView: View {
     public var body: some View {
         ScrollView(showsIndicators: false) {
             VStack {
-//                HStack {
-//                    Text("\(viewModel.product.title)")
-//                        .font(.ti)
-//                    Spacer()
-//                }
-                
                 RemoteImageView(url: viewModel.featuredImageUrl)
                     .overlay(alignment: .bottomLeading) {
                         if viewModel.hasLabels {
@@ -59,7 +53,6 @@ public struct ProductDetailView: View {
                 }
             }
             .navigationBarTitle(viewModel.product.title, displayMode: .inline)
-
         }
     }
     
